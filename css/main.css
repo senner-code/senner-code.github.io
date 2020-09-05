@@ -104,8 +104,7 @@ section {
   /* Подпись к полям */
   position: absolute;
   left: 50%;
-  -webkit-transform: translate(-50%) translateY(-50%);
-          transform: translate(-50%) translateY(-50%);
+  transform: translate(-50%) translateY(-50%);
   padding: 0.5rem;
   font-size: 1.3rem;
   background-color: #ffffff;
@@ -141,4 +140,36 @@ section {
   height: 7rem;
   line-height: 7rem;
   color: #1a1820;
+}
+.advantages {
+  color: #1a1820;
+}
+.advantages h2 {
+  display: block;
+  text-align: center;
+  margin: 8rem 24rem;
+  font-size: 3.6rem;
+  font-weight: 700;
+}
+.advantages .row {
+  margin-bottom: 10rem;
+  text-align: center;
+}
+.advantages img {
+  height: 7rem;
+  margin-bottom: 5rem;
+}
+.advantages h4 {
+  margin-bottom: 3rem;
+  font-size: 2rem;
+  font-weight: 700;
+}
+.advantages span {
+  font-size: 1.6rem;
+  line-height: 2rem;
+  font-weight: 300;
+}
+.advantages a {
+  color: #4aa223;
+  text-decoration: underline;
 }
