@@ -1,4 +1,3 @@
-
 /*  */
 
 /* Fonts */
@@ -35,7 +34,6 @@
 .bold() {
     font-family: 'ProximaNova_Bold', sans-serif;
 }
-
 
 
 /* collors */
@@ -78,9 +76,11 @@ section {
 
 
 .main {
-    background:#fff url(../img/main-bg.png) center center no-repeat;
+    background: #fff url(../img/main-bg.png) center center no-repeat;
+
     &-content {
         margin-top: 10rem;
+
         /* Главный заголовок */
         h1 {
             line-height: 1.45;
@@ -89,11 +89,13 @@ section {
             text-transform: uppercase;
         }
     }
+
     &-subtitle {
         /* Подзаголовок */
         margin-top: 5rem;
         font-size: 2.4rem;
     }
+
     span {
         /* Стоимость работ */
         margin-top: 6rem;
@@ -103,33 +105,40 @@ section {
         font-size: 1.8rem;
         background-color: @icons-color;
         color: @light;
+
         strong {
             font-size: 3rem;
             .bold();
         }
     }
+
     &-trigger {
         /* Текст под стоимостью */
-        margin-top: 3.5rem;
+
+        margin-top: 2.5rem;
+        margin-bottom: 3.5rem;
         display: block;
         font-size: 2.2rem;
         text-transform: uppercase;
         .bold();
     }
-    
+
     &-form {
         /* Главная форма */
         text-align: center;
         padding: 4.5rem 5rem;
         background-color: @light;
+
         &-header {
             /* Главный заголовок формы */
             margin-bottom: 3rem;
             font-size: 1.3rem;
+
             strong {
                 font-size: 1.4rem;
             }
         }
+
         /* поле для ввода */
         &-input {
             margin: 2rem 0;
@@ -137,8 +146,9 @@ section {
             width: 100%;
             padding: 1.5rem;
             border: 1px solid @border-input;
-            
+
         }
+
         label {
             /* Подпись к полям */
             position: absolute;
@@ -149,11 +159,13 @@ section {
             background-color: @light;
 
         }
+
         &-btn {
             width: 100%;
             height: 6rem;
 
         }
+
         small {
             display: block;
             margin-top: 1.5rem;
@@ -171,6 +183,7 @@ section {
     display: table;
     width: 100%;
     height: 7rem;
+
     &-block {
         display: table-cell;
         vertical-align: middle;
@@ -188,3 +201,88 @@ section {
     color: @text;
 }
 
+.advantages {
+    color: @text;
+
+    
+    h2 {
+        /* Главный заголовок блока */
+        display: block;
+        margin: 0rem 24rem;
+        margin-top: 8rem;
+        text-align: center;
+        font-size: 3.6rem;
+        font-weight: 700;
+    }
+
+    
+    img {
+        /* Изображение */
+        height: 7rem;
+        margin-bottom: 5rem;
+    }
+
+    .col-md-3 {
+        margin-top: 8rem;
+    }
+
+  
+    h4 {
+        /* Заголовок блока */
+        margin-bottom: 3rem;
+        font-size: 2rem;
+        font-weight: 700;
+    }
+
+    
+    span {
+        /* Текст внутри блока */
+        font-size: 1.6rem;
+        line-height: 2rem;
+        font-weight: 300;
+    }
+
+    
+    .bottom {
+        /* Класс отступа */
+        text-align: center;
+        margin-bottom: 5rem;
+    }
+
+    
+    a {
+        /* Ссылка внутри текста */
+        color: #4aa223;
+        text-decoration: underline;
+    }
+}
+
+
+.price-content {
+    background: #fff url(../img/price-background.webp) center center no-repeat;
+
+    .row {
+        text-align: center;
+    }
+
+    .price-block {
+        margin: 9rem 0rem;
+
+    }
+
+    .price-target {
+        text-align: center;
+        padding: 1rem 1rem;
+        margin-left: 3.2rem;
+        display: inline-block;
+        background-color: @light;
+        width: 32rem;
+        height: 66rem;
+
+
+        .img-price {
+            width: 29rem;
+            height: 20rem;
+        }
+    }
+}
