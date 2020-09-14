@@ -60,9 +60,9 @@ section {
   /* Главный заголовок */
 }
 .main-content h1 {
+  font-size: 3.5rem;
   line-height: 1.45;
   font-family: 'ProximaNova_Bold', sans-serif;
-  font-size: 4rem;
   text-transform: uppercase;
 }
 .main-subtitle {
@@ -181,6 +181,14 @@ section {
   .wrap-block {
     text-align: center;
     margin-bottom: 1rem;
+  }
+  h1 {
+    font-size: 3rem;
+  }
+}
+@media (max-width: 500px) {
+  h1 {
+    font-size: 3rem;
   }
 }
 @media (min-width: 992px) {
