@@ -54,6 +54,17 @@ body {
     .reg();
 }
 
+a:hover {
+    text-decoration: none;
+}
+
+button, input, a {
+    &:focus {
+        outline: none;
+    }
+}
+
+
 .button {
     padding: 1rem 3rem;
     border-radius: 8px;
@@ -62,6 +73,12 @@ body {
     background-color: @btn-color;
     text-transform: uppercase;
     border: none;
+    transition: all 0.2s;
+
+    &:hover {
+        cursor: pointer;
+        background-color: darken(@btn-color, 5%);
+    }
 }
 
 
@@ -76,7 +93,7 @@ section {
 
 
 .main {
-    background: #fff url(../img/main-bg.png) center center no-repeat;
+    background: #fff url(../img/main-bg.png) center no-repeat;
 
     &-content {
         margin-top: 10rem;
@@ -98,7 +115,7 @@ section {
 
     span {
         /* Стоимость работ */
-        margin-top: 6rem;
+        margin-top: 2rem;
         display: inline-block;
         padding: 3rem 5rem;
         text-align: center;
@@ -115,8 +132,8 @@ section {
     &-trigger {
         /* Текст под стоимостью */
 
-        margin-top: 2.5rem;
-        margin-bottom: 3.5rem;
+        margin-top: 3rem;
+        margin-bottom: 7rem;
         display: block;
         font-size: 2.2rem;
         text-transform: uppercase;
@@ -201,88 +218,20 @@ section {
     color: @text;
 }
 
-.advantages {
-    color: @text;
 
-    
-    h2 {
-        /* Главный заголовок блока */
-        display: block;
-        margin: 0rem 24rem;
-        margin-top: 8rem;
-        text-align: center;
-        font-size: 3.6rem;
-        font-weight: 700;
+@media (max-width: 991px) {
+    .main{
+        background-position: top right;
     }
 
-    
-    img {
-        /* Изображение */
-        height: 7rem;
-        margin-bottom: 5rem;
-    }
-
-    .col-md-3 {
-        margin-top: 8rem;
-    }
-
-  
-    h4 {
-        /* Заголовок блока */
-        margin-bottom: 3rem;
-        font-size: 2rem;
-        font-weight: 700;
-    }
-
-    
-    span {
-        /* Текст внутри блока */
-        font-size: 1.6rem;
-        line-height: 2rem;
-        font-weight: 300;
-    }
-
-    
-    .bottom {
-        /* Класс отступа */
-        text-align: center;
-        margin-bottom: 5rem;
-    }
-
-    
-    a {
-        /* Ссылка внутри текста */
-        color: #4aa223;
-        text-decoration: underline;
-    }
-}
-
-
-.price-content {
-    background: #fff url(../img/price-background.webp) center center no-repeat;
-
-    .row {
+    .phone-block{
         text-align: center;
     }
-
-    .price-block {
-        margin: 9rem 0rem;
-
+    .main_content{
+        margin-top: 3rem;
     }
-
-    .price-target {
+    .main-title{
+        padding-bottom: 3rem;
         text-align: center;
-        padding: 1rem 1rem;
-        margin-left: 3.2rem;
-        display: inline-block;
-        background-color: @light;
-        width: 32rem;
-        height: 66rem;
-
-
-        .img-price {
-            width: 29rem;
-            height: 20rem;
-        }
     }
 }

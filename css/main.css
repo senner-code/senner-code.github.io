@@ -24,6 +24,14 @@ html {
 body {
   font-family: 'ProximaNova_Reg', sans-serif;
 }
+a:hover {
+  text-decoration: none;
+}
+button:focus,
+input:focus,
+a:focus {
+  outline: none;
+}
 .button {
   padding: 1rem 3rem;
   border-radius: 8px;
@@ -32,6 +40,12 @@ body {
   background-color: #fcb303;
   text-transform: uppercase;
   border: none;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+.button:hover {
+  cursor: pointer;
+  background-color: #e3a103;
 }
 /* Typography */
 section {
@@ -39,7 +53,7 @@ section {
 }
 /* main */
 .main {
-  background: #ffffff url(../img/main-bg.png) center center no-repeat;
+  background: #ffffff url(../img/main-bg.png) center no-repeat;
 }
 .main-content {
   margin-top: 10rem;
@@ -58,7 +72,7 @@ section {
 }
 .main span {
   /* Стоимость работ */
-  margin-top: 6rem;
+  margin-top: 2rem;
   display: inline-block;
   padding: 3rem 5rem;
   text-align: center;
@@ -72,8 +86,8 @@ section {
 }
 .main-trigger {
   /* Текст под стоимостью */
-  margin-top: 2.5rem;
-  margin-bottom: 3.5rem;
+  margin-top: 3rem;
+  margin-bottom: 7rem;
   display: block;
   font-size: 2.2rem;
   text-transform: uppercase;
@@ -143,67 +157,18 @@ section {
   line-height: 7rem;
   color: #1a1820;
 }
-.advantages {
-  color: #1a1820;
-}
-.advantages h2 {
-  /* Главный заголовок блока */
-  display: block;
-  margin: 0rem 24rem;
-  margin-top: 8rem;
-  text-align: center;
-  font-size: 3.6rem;
-  font-weight: 700;
-}
-.advantages img {
-  /* Изображение */
-  height: 7rem;
-  margin-bottom: 5rem;
-}
-.advantages .col-md-3 {
-  margin-top: 8rem;
-}
-.advantages h4 {
-  /* Заголовок блока */
-  margin-bottom: 3rem;
-  font-size: 2rem;
-  font-weight: 700;
-}
-.advantages span {
-  /* Текст внутри блока */
-  font-size: 1.6rem;
-  line-height: 2rem;
-  font-weight: 300;
-}
-.advantages .bottom {
-  /* Класс отступа */
-  text-align: center;
-  margin-bottom: 5rem;
-}
-.advantages a {
-  /* Ссылка внутри текста */
-  color: #4aa223;
-  text-decoration: underline;
-}
-.price-content {
-  background: #ffffff url(../img/price-background.webp) center center no-repeat;
-}
-.price-content .row {
-  text-align: center;
-}
-.price-content .price-block {
-  margin: 9rem 0rem;
-}
-.price-content .price-target {
-  text-align: center;
-  padding: 1rem 1rem;
-  margin-left: 3.2rem;
-  display: inline-block;
-  background-color: #ffffff;
-  width: 32rem;
-  height: 66rem;
-}
-.price-content .price-target .img-price {
-  width: 29rem;
-  height: 20rem;
+@media (max-width: 991px) {
+  .main {
+    background-position: top right;
+  }
+  .phone-block {
+    text-align: center;
+  }
+  .main_content {
+    margin-top: 3rem;
+  }
+  .main-title {
+    padding-bottom: 3rem;
+    text-align: center;
+  }
 }
