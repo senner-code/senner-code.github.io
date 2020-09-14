@@ -93,7 +93,7 @@ section {
 
 
 .main {
-    background: #fff url(../img/main-bg.png) center no-repeat;
+    background: #fff url(../img/main-bg.png) center center no-repeat;
 
     &-content {
         margin-top: 10rem;
@@ -193,7 +193,6 @@ section {
 
 .header {
     padding: 3rem 0;
-    height: 7rem;
 }
 
 .wrap {
@@ -221,7 +220,7 @@ section {
 
 @media (max-width: 991px) {
     .main{
-        background-position: top right;
+        background-position: center right;
     }
 
     .phone-block{
@@ -233,5 +232,29 @@ section {
     .main-title{
         padding-bottom: 3rem;
         text-align: center;
+    }
+}
+
+@media (max-width: 767px){
+    .main{
+
+    }
+    .header {
+        text-align: center;
+    }
+    .main_content{
+        margin-top: 0.5rem;
+    }
+    .wrap-block{
+        text-align: center;
+        margin-bottom: 1rem;
+    }
+
+    
+}
+
+@media (min-width: 992px){
+    .header{
+        height: 7rem;
     }
 }
