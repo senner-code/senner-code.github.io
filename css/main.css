@@ -67,7 +67,6 @@ section {
 .main-subtitle {
   /* Подзаголовок */
   margin-top: 5rem;
-  font-size: 2.4rem;
 }
 .main span {
   /* Стоимость работ */
@@ -157,7 +156,7 @@ section {
 }
 @media (max-width: 991px) {
   h1 {
-    font-size: 3.5rem;
+    font-size: 4rem;
   }
   .main {
     background-position: center right;
@@ -171,6 +170,9 @@ section {
   .main-title {
     padding-bottom: 3rem;
     text-align: center;
+  }
+  .main-subtitle {
+    font-size: 3rem;
   }
 }
 @media (max-width: 767px) {
@@ -187,19 +189,31 @@ section {
     text-align: center;
     margin-bottom: 1rem;
   }
+  .main-subtitle {
+    font-size: 3rem;
+  }
 }
 @media (min-width: 992px) {
   .header {
     height: 7rem;
   }
+  .main-subtitle {
+    font-size: 2.4rem;
+  }
 }
 @media (max-width: 500px) {
   h1 {
+    font-size: 2.5rem;
+  }
+  .main-subtitle {
     font-size: 2rem;
   }
 }
 @media (max-width: 400px) {
   h1 {
-    font-size: 2rem;
+    font-size: 2.1rem;
+  }
+  .main-subtitle {
+    font-size: 1.6rem;
   }
 }
