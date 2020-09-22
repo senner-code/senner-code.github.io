@@ -154,6 +154,57 @@ section {
   line-height: 7rem;
   color: #1a1820;
 }
+.section-header {
+  margin-bottom: 8rem;
+  margin-top: 8rem;
+  text-align: center;
+  font-family: 'ProximaNova_Bold', sans-serif;
+  font-size: 3rem;
+}
+.slick-active {
+  outline: none;
+}
+.arrow {
+  position: absolute;
+  top: 50%;
+  z-index: 99;
+  width: 3rem;
+  height: 3rem;
+  border: none;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+.prev {
+  left: 0;
+  background: url(/img/left-arrow.svg) center no-repeat;
+  background-size: 70%;
+}
+.next {
+  right: 0;
+  background: url(/img/rigth-arrow.svg) center no-repeat;
+  background-size: 70%;
+}
+.features-block {
+  text-align: center;
+}
+.features-block h3 {
+  font-size: 2rem;
+  font-family: 'ProximaNova_Bold', sans-serif;
+  margin-bottom: 2rem;
+}
+.features-block p {
+  display: inline-block;
+  widows: 70%;
+  font-size: 1.5rem;
+}
+.features-img {
+  height: 8rem;
+  margin-bottom: 3rem;
+}
+.features-img img {
+  display: block;
+  margin: 0 auto;
+}
 @media (max-width: 991px) {
   h1 {
     font-size: 4rem;
