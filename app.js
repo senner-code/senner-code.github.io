@@ -20,12 +20,15 @@ const logger = {
 
 }
 
-logger.keyAndValues.call(person)
+arrays = ("Object Keys: ", Object.keys(person))
 
-
-
-
+console.log(arrays)
 
 const a = document.getElementById("hello")
 
-a.textContent = logger.keyAndValues.call(person)
+arrays.forEach((text, i , arrays) => {
+    setTimeout(()=>{
+        a.textContent = i
+    }, 10000)
+    console.log(i)
+})
