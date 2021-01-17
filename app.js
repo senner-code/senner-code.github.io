@@ -1,34 +1,24 @@
-const person = {
-    name:"Senner",
+const patient = {
+    name: "Vadim",
+    weight: 71,
+    growth: 174,
+    pulse: 90,
     age: 17,
-    isProgrammer: true,
-    l: ["ru", "en", "de"],
-    hello(){
-        console.log("hello world")
-    }
-}
-const logger = {
-    keys() {
-        console.log("Object Keys: ", Object.keys(this))
-    },
-
-    keyAndValues() {
-        Object.keys(this).forEach((key) => {
-            console.log(key ,":", this[key])
-        })
-    }
-
+    bottomBlood: 80,
+    topBlood: 110,
+    sex: "man"
 }
 
-arrays = ("Object Keys: ", Object.keys(person))
+indexKetle = (weight, growth) => {
+    let index = weight / ((growth/100) * 2)
+    return index
+}
 
-console.log(arrays)
+const a = indexKetle(patient["weight"], patient["growth"])
 
-const a = document.getElementById("hello")
-
-arrays.forEach((text, i , arrays) => {
-    setTimeout(()=>{
-        a.textContent = i
-    }, 10000)
-    console.log(i)
-})
+if(a>18.5 && a < 24.9){
+    console.log("Your Index Ketle = ", a , " It`s good")
+}
+else{
+    console.log("Your Index Ketle = ", a , " It`s bad")
+}

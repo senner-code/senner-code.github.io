@@ -13,3 +13,7 @@ Day 6
 
 Created Plan of "Your HI" , Diagramm and tasks
 
+Day 7
+
+Set up Object "patient" + funcion for Index Ketle
+
