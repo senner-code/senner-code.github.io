@@ -1,0 +1,9 @@
+h1 {
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+strong {
+    font-size: 50px;
+    color: rgb(22, 197, 16);
+}

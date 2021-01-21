@@ -9,6 +9,11 @@ const patient = {
     sex: "man"
 }
 
+
+
+
+
+alert(document.getElementById("txt").value);
 indexKetle = (weight, growth) => {
     let index = weight / ((growth/100) * 2)
     return index
@@ -21,4 +26,5 @@ if(a>18.5 && a < 24.9){
 }
 else{
     console.log("Your Index Ketle = ", a , " It`s bad")
-}
+}                     
+
