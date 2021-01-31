@@ -1,9 +1,30 @@
-h1 {
-    display:flex;
-    align-items: center;
-    justify-content: center;
+body {
+    margin: 0;
+    padding: 0;
 }
-strong {
-    font-size: 50px;
-    color: rgb(22, 197, 16);
+
+h1{
+    margin: 1rem 0;
+    text-align: center;
+}
+
+.card-section {
+    display: flex;
+    justify-content: space-around;
+}
+
+.card {
+    margin: 1%;
+    width: 30%;
+    height:300px;
+    align-items: center;
+    border: 1px solid black;
+}
+
+.btn {
+    margin-top: 1rem;
+}
+
+h2 {
+    margin-top: 5rem;
 }
