@@ -16,7 +16,6 @@ const arrayCreate = (rows, coll) => {
             })
         }
     }
-    confirmButton.style.zIndex = 1
     return massive
 }
 
