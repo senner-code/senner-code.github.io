@@ -65,7 +65,7 @@ const el = document.querySelector('[data-massive]')
 el.addEventListener('click', listener)
 
 const form = document.querySelector('.confirm-block')
-form.insertAdjacentHTML('afterbegin', `<button class="main">Поиск нулей</button>`)
+form.insertAdjacentHTML('afterbegin', `<button class="main">Пошук нулів</button>`)
 
 const confirmButton = document.querySelector('.main')
 
@@ -99,16 +99,16 @@ const findZero = (massive,row, column) => {
     if(time<0){time = -time}
     if(row){
         document.querySelector('.result').innerHTML = `
-        <h2>Матрица размерности ${row}X${column}</h2>
-        <p>НУЛЕЙ - ${zero}</p>
-        <p>Время - ${time}ms</p>
+        <h2>Матриця розміру ${row}X${column}</h2>
+        <p>НУЛІВ - ${zero}</p>
+        <p>ЧАС - ${time}ms</p>
         `
     }
     else{
         if(confirm(`
-        Нулей - ${zero}
-        Время - ${time}ms
-        Повторить работу?
+        НУЛІВ - ${zero}
+        Час близький до - ${time}ms
+        Повторити роботу?
         `)){
             location.href=location.href
         }
