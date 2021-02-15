@@ -3,9 +3,3 @@
     background: rgb(189, 183, 183);;
 }
 
-.matrix {
-    visibility: hidden;
-    height: 200px;
-    width: 200px;
-    z-index: -10;
-}

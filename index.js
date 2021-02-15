@@ -1,7 +1,7 @@
 const insertNumber = (options) => {
     const form = document.querySelector('.insert')
     form.insertAdjacentHTML('afterbegin', `
-    <input type="text" placeholder="${options.first + 1} X ${options.second + 1}" data-row="${options.first}" data-column="${options.second}">`)
+    <input type="text" placeholder="${options.first + 1} X ${options.second + 1}" data-row="${options.first}" data-column="${options.second}" value="0">`)
 }
 
 
@@ -11,10 +11,10 @@ const arrayCreate = (rows, coll, G) => {
         massive[i] = new Array()
         for (let j = 0; j < coll; j++) {
             if(G){
-                massive[i][j] = getRandomInt(0,1)
+                massive[i][j] = getRandomInt(0,2)
             }
             else{
-                massive[i][j] = 0
+                massive[i][j] = 10
                 insertNumber({
                     first: i,
                     second: j})
@@ -23,11 +23,14 @@ const arrayCreate = (rows, coll, G) => {
     }
     return massive
 }
-    
+
+const form = document.querySelector('.confirm-block')
+form.insertAdjacentHTML('afterbegin', `<button class="main">Пошук нулів</button>`)
+
+let nm = document.querySelectorAll('.nm')
 
 const listener = (event) => {
     if (event.target.dataset.massive) {
-        let nm = document.querySelectorAll('.nm')
         arrayCreate(nm[0].value, nm[1].value)
     }
 }
@@ -39,14 +42,10 @@ const manualFunc = () =>{
 
 const manualGen = document.querySelector('[data-manual]')
 
-console.log(manualGen)
-
 manualGen.onclick = function(){manualFunc()}
 
-const autoGen = () => {
+const autoGen = (row, column) => {
     const G = true;
-    const row = getRandomInt(1000,10000)
-    const column = getRandomInt(1000,10000)
     console.log('Row - ' + row)
     console.log('Column - ' + column)
     findZero(arrayCreate(row, column , G) , row, column)
@@ -54,7 +53,7 @@ const autoGen = () => {
 
 const randomGen = document.querySelector('[data-random]')
 
-randomGen.onclick = function(){autoGen()}
+randomGen.onclick = function(){autoGen(nm[0].value, nm[1].value)}
 
 function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min)) + min;
@@ -64,8 +63,7 @@ function getRandomInt(min, max) {
 const el = document.querySelector('[data-massive]')
 el.addEventListener('click', listener)
 
-const form = document.querySelector('.confirm-block')
-form.insertAdjacentHTML('afterbegin', `<button class="main">Пошук нулів</button>`)
+
 
 const confirmButton = document.querySelector('.main')
 
@@ -77,8 +75,13 @@ const hello = () => {
     for (let i = 0; i < nm[0].value; i++) {
         massive[i] = new Array()
         for (let j = 0; j < nm[1].value; j++) {
-            massive[i][j] = td[indexx].value
-            indexx++
+            if(td[indexx].value === undefined){
+                massive[i][j] =  1
+            }
+            else{
+                massive[i][j] = td[indexx].value
+                indexx++
+            }
         }
     }
     findZero(massive)
@@ -115,6 +118,8 @@ const findZero = (massive,row, column) => {
     }
     
 }
+
+
 
 
 confirmButton.onclick = function(){hello()}
