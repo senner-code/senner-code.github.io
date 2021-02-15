@@ -101,7 +101,11 @@ const findZero = (massive,row, column) => {
         `
     }
     else{
-        alert("НУЛЕЙ - "+ zero)
+        if(confirm(`Нулей - ${zero}
+        Повторить работу?
+        `)){
+            location.href=location.href
+        }
     }
     
 }
