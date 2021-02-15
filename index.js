@@ -11,7 +11,7 @@ const arrayCreate = (rows, coll, G) => {
         massive[i] = new Array()
         for (let j = 0; j < coll; j++) {
             if(G){
-                massive[i][j] = getRandomInt(0,2)
+                massive[i][j] = getRandomInt(0,1)
             }
             else{
                 massive[i][j] = 0
@@ -45,8 +45,8 @@ manualGen.onclick = function(){manualFunc()}
 
 const autoGen = () => {
     const G = true;
-    const row = getRandomInt(1,6)
-    const column = getRandomInt(1,6)
+    const row = getRandomInt(1000,10000)
+    const column = getRandomInt(1000,10000)
     console.log('Row - ' + row)
     console.log('Column - ' + column)
     findZero(arrayCreate(row, column , G) , row, column)
@@ -86,22 +86,28 @@ const hello = () => {
 
 const findZero = (massive,row, column) => {
     let zero = 0
+    let thisDate = (new Date().getTime())%1000
     for (let p = 0; p < massive.length; p++) {
         for (let g = 0; g < massive[p].length; g++) {
-            console.log(massive[p][g])
             if(massive[p][g] == 0){
                 zero++
             }
         }
     }
+
+    let time = (new Date().getTime())%1000 - thisDate
+    if(time<0){time = -time}
     if(row){
         document.querySelector('.result').innerHTML = `
         <h2>Матрица размерности ${row}X${column}</h2>
         <p>НУЛЕЙ - ${zero}</p>
+        <p>Время - ${time}ms</p>
         `
     }
     else{
-        if(confirm(`Нулей - ${zero}
+        if(confirm(`
+        Нулей - ${zero}
+        Время - ${time}ms
         Повторить работу?
         `)){
             location.href=location.href
