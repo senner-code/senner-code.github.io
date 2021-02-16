@@ -1,6 +1,7 @@
 
 
 const createInput = (options) => {
+
     const form = document.querySelector('.insert')
     form.insertAdjacentHTML('afterbegin', `
     <input type="text" placeholder="${options.first + 1} X ${options.second + 1}" data-row="${options.first}" data-column="${options.second}">`)
@@ -19,6 +20,8 @@ const arrayCreate = (rows, coll, G) => {
                 createInput({
                     first: i,
                     second: j})
+                const elen = document.querySelector('.confirm-block')
+                elen.style.visibility = 'visible'
             }     
         }
     }
@@ -35,9 +38,7 @@ const listener = (event) => {
 }
 
 const manualFunc = () =>{
-    const elen = document.querySelector('.confirm-block')
-    console.log(elen)
-    elen.style.visibility = 'visible'
+
     element = document.querySelector('.matrix')
     element.style.visibility = 'visible'
 }
