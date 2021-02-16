@@ -3,3 +3,7 @@
     background: rgb(189, 183, 183);;
 }
 
+
+.confirm-block {
+    visibility: hidden;
+}

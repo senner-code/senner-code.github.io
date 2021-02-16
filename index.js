@@ -1,9 +1,10 @@
-const insertNumber = (options) => {
+
+
+const createInput = (options) => {
     const form = document.querySelector('.insert')
     form.insertAdjacentHTML('afterbegin', `
-    <input type="text" placeholder="${options.first + 1} X ${options.second + 1}" data-row="${options.first}" data-column="${options.second}" value="0">`)
+    <input type="text" placeholder="${options.first + 1} X ${options.second + 1}" data-row="${options.first}" data-column="${options.second}">`)
 }
-
 
 const arrayCreate = (rows, coll, G) => {
     let massive = new Array()
@@ -15,7 +16,7 @@ const arrayCreate = (rows, coll, G) => {
             }
             else{
                 massive[i][j] = 10
-                insertNumber({
+                createInput({
                     first: i,
                     second: j})
             }     
@@ -24,8 +25,6 @@ const arrayCreate = (rows, coll, G) => {
     return massive
 }
 
-const form = document.querySelector('.confirm-block')
-form.insertAdjacentHTML('afterbegin', `<button class="main">Пошук нулів</button>`)
 
 let nm = document.querySelectorAll('.nm')
 
@@ -36,6 +35,9 @@ const listener = (event) => {
 }
 
 const manualFunc = () =>{
+    const elen = document.querySelector('.confirm-block')
+    console.log(elen)
+    elen.style.visibility = 'visible'
     element = document.querySelector('.matrix')
     element.style.visibility = 'visible'
 }
@@ -46,8 +48,6 @@ manualGen.onclick = function(){manualFunc()}
 
 const autoGen = (row, column) => {
     const G = true;
-    console.log('Row - ' + row)
-    console.log('Column - ' + column)
     findZero(arrayCreate(row, column , G) , row, column)
 }
 
@@ -59,15 +59,13 @@ function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min)) + min;
 }
 
-
 const el = document.querySelector('[data-massive]')
 el.addEventListener('click', listener)
 
-
-
 const confirmButton = document.querySelector('.main')
 
-const hello = () => {
+const manualInput = () => {
+    
     let td = document.querySelectorAll('[data-row]')
     let nm = document.querySelectorAll('.nm')
     let massive = new Array()
@@ -119,7 +117,4 @@ const findZero = (massive,row, column) => {
     
 }
 
-
-
-
-confirmButton.onclick = function(){hello()}
+confirmButton.onclick = function(){manualInput()}
