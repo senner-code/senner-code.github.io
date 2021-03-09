@@ -11,33 +11,54 @@
 
 <body>
     <div class="container">
-        <h1>Welcome to SearchZERO</h1>
+        <h1 class="daun">Color Graph</h1>
         <div class="content">
             <div class="forms">
                 <div class="matrix">
-                    <input type="text" placeholder="N" class="nm">
-                    <input type="text" placeholder="M" class="nm">
+                    <input type="text" placeholder="NxN" id="n"
                 </div>
+                <h4>Заповнення матриці</h2>
                 <div class="typegenerate">
-                    <h4>Заповнення матриці</h2>
-                    <button type="submit" data-random="true">Випадкове</button>
-                    <button type="submit" data-manual="true">Вручну</button>
+                    <div class="manual-box">
+                        <p>Вручную</p>
+                        <input type="checkbox" onclick="arrayCreate()" name="Вручну" id="manual" value="1">
+                    </div>
+                    <div class="random-box">
+                        <p>Рандомно</p>
+                        <input type="checkbox"  onclick="randomInput()" name="Вручну" id="random">
+                    </div>
                 </div>
-                <button type="submit" data-massive="true">Підтвердити(для ручного вводу)</button>
             </div>
             <div class="insert">
                 
             </div>
-            <div class="confirm-block">
-                <button class="main">Пошук нулів</button>
-            </div>
+            <button type="submit" class="submit-button"  id="submitButton">Confirm</button>
             <div class="result">
                 
             </div>
+
+
         </div>
             
     </div>
     <script src="/index.js"></script>
+    <script src="/algorithms.js"></script>
+
+
+
+<div class="autist">
+     <h1>Algoritm1:</h1>
+    <h4 id="Original_indexes"></h4>
+    <h4 id="otvet"></h4>
+    <h4 id="timer"></h4>
+</div>
+
+<div class="autizm">
+    <h1>Algoritm2:</h1>
+    <h4 id="Original_indexes2"></h4>
+    <h4 id="otvet2"></h4>
+    <h4 id="timer2"></h4>
+</div>
 </body>
 
 </html>

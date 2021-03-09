@@ -1,12 +1,41 @@
+html {
+  height: 100%;
+  background:url(https://images.wallpaperscraft.ru/image/kraska_zhidkost_abstraktnyj_130239_1920x1080.jpg);
+  background-size: cover;
+}
+body {
+  color: #40118b;
+  background:url(https://images.wallpaperscraft.ru/image/kraska_zhidkost_abstraktnyj_130239_1920x1080.jpg);
+  font: 300 20px/1.3 "Source Sans Pro",sans-serif;
+  margin: 0;
+  padding: 15em 0 0em;
+  text-align: center;
+}
 .container {
-    display: flex;
-    justify-content: center;
-    background: rgb(189, 183, 183);
+  display: flex;
+  justify-content: center;
+  background: rgb(231, 170, 170);
+  
+}
+.autizm{
+margin-left:40px;
+color: black;
+}
+.daun{
+margin-right: 160px;
+color: black;
+}
+.content{
+margin-right: 110px;
+color: black;
+}
+.autist{
+margin-right: 40px;
+color: black;
 }
 
 
 
-
 .confirm-block {
-    visibility: hidden;
+  visibility: hidden;
 }
